@@ -7,12 +7,10 @@ function printName(event) {
 
 function checkAnswer(event) {
     event.preventDefault();
-    if(document.getElementById('option-three').checked) {   
-        let answer = document.getElementsByClassName('answer').value;  
-        let printAnswer = document.getElementById("print-answer");
+    let printAnswer = document.getElementById("print-answer");
+    if(document.getElementById('correct').checked) {   
         printAnswer.innerHTML = "the answer is correct!"   
     }  else {
-        let printAnswer = document.getElementById("print-answer");
         printAnswer.innerHTML = "the answer is wrong ;(" 
     }
 }    
