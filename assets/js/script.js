@@ -1,37 +1,11 @@
-
-
-
-function handleSubmit(event) {
-    // Prevent the default submit action)
+function printName(event) {
     event.preventDefault();
-
-    // Get the input elements
-    let name = document.getElementById('name-input')
-
-    // Log their values to the console
-    console.log('name', name.value);
+    let name = document.getElementById('name');
+    console.log(name);
+    let printName = document.getElementById("print-name");
+    printName.innerHTML = `Hi ${name.value}, Welcome to the game!`;
 }
 
-// This gets the form and attaches an event listener to it
-let form = document.getElementById('name-input');
-form.addEventListener('submit', handleSubmit);
+let yourName = document.getElementById("your-name");
+yourName.addEventListener('submit', printName);
 
-
-/*Basic game function */
-function game(answer) {
-    event.preventDefault();
-    if (answer === 'true') {
-        console.log("Correct");
-    } else {
-        console.log("wrong");
-    }
-}
-
-let answer = document.getElementsByClassName('answer');
-console.log(answer);
-
-
-// This gets the form and attaches an event listener to it
-let questionAnswer = document.getElementById('question');
-console.log(questionAnswer);
-questionAnswer.addEventListener('submit', game);

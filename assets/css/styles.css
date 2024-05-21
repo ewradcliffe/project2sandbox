@@ -1,7 +1,16 @@
 
-/*Intruduction*/
+/*Introduction*/
 #introduction {
     text-align: center;
+}
+
+#your-name {
+    text-align: center;
+}
+
+#print-name {
+    text-align: center;
+    background: rgb(134, 134, 245);
 }
 
 /*Question styling*/

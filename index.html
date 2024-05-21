@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--Link to CSS-->
     <link rel="stylesheet" href="assets/css/styles.css">
-    
+
 </head>
+
 <body>
-    <!--Link to JavaScript-->
-    <script src="assets/js/script.js"></script>
     <section id="introduction">
         <h1>Quiz game</h1>
         <p>Rules explaination</p>
-
     </section>
-    <section>   
-        <form action="POST" name="name-input">
-            <label for="name-input">Your name</label>
-            <input type="text" id="name-input" placeholder="Your name" name="name-input">
+    <section>
+        <form id="your-name" method="POST">
+            <label for="name">Your name:</label>
+            <input id="name" type="text" name="name" required>
             <input type="submit" value="Let's get started!">
         </form>
+    </section>
+    <section>
+        <p id="print-name"></p>
     </section>
     <section>
         <form class="question">
@@ -40,11 +42,14 @@
             </form>
         </form>
     </section>
-   
-        
+
+
     <footer>
         <p>Your Score is 0</p>
     </footer>
-    
+    <!--Link to JavaScript-->
+    <script src="assets/js/script.js"></script>
+
 </body>
+
 </html>
