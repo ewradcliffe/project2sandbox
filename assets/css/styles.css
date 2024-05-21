@@ -13,3 +13,7 @@
     background: rgb(134, 134, 245);
 }
 
+/*Footer*/
+footer {
+    position: fixed;
+}
