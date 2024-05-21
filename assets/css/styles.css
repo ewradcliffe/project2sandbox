@@ -1,0 +1,15 @@
+
+/*Intruduction*/
+#introduction {
+    text-align: center;
+}
+
+/*Question styling*/
+.question {
+    text-align: center;
+}
+
+.question > h3 {
+    background: rgb(134, 134, 245);
+}
+

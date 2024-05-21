@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <section>
+    <section id="introduction">
         <h1>Quiz game</h1>
         <p>Rules explaination</p>
 
@@ -17,6 +19,25 @@
             <input type="text" id="name-input" placeholder="Your name" name="name-input">
             <input type="submit" value="Let's get started!">
         </form>
+    </section>
+    <section>
+        <form class="question">
+            <h3>Question 1</h3>
+            <p>What is the capital of the UK?</p>
+            <form action="POST" name="question">
+                <input type="radio" id="option-one">
+                <label for="option-one">Belfast</label>
+                <input type="radio" id="option-two">
+                <label for="option-two">Cardiff</label>
+                <input type="radio" id="option-three">
+                <label for="option-three">London</label>
+                <input type="radio" id="option-four">
+                <label for="option-four">Edinburgh</label>
+            </form>
+
+
+        </form>
+    </section>
 
         
     </section>
