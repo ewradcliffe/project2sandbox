@@ -1,3 +1,5 @@
+let totalScore = 0;
+
 function printName(event) {
     event.preventDefault();
     let name = document.getElementById('name');
@@ -9,7 +11,10 @@ function checkAnswer(event) {
     event.preventDefault();
     let printAnswer = document.getElementById("print-answer");
     if(document.getElementById('correct').checked) {   
-        printAnswer.innerHTML = "the answer is correct!"   
+        printAnswer.innerHTML = "the answer is correct!" 
+        document.getElementById('score');
+        ++totalScore;
+        score.innerHTML = `Your score is ${totalScore}`;  
     }  else {
         printAnswer.innerHTML = "the answer is wrong ;(" 
     }
