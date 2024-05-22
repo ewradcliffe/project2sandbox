@@ -1,5 +1,7 @@
+/*total score*/
 let totalScore = 0;
 
+/*Function to print name*/
 function printName(event) {
     event.preventDefault();
     let name = document.getElementById('name');
@@ -7,6 +9,7 @@ function printName(event) {
     printName.innerHTML = `Hi ${name.value}, Welcome to the game!`;
 }
 
+/*Function to check answer*/
 function checkAnswer(event) {
     event.preventDefault();
     let printAnswer = document.getElementById("print-answer");
@@ -20,9 +23,10 @@ function checkAnswer(event) {
     }
 }    
 
-
+/*Event Listener to print name*/
 let yourName = document.getElementById("your-name");
 yourName.addEventListener('submit', printName);
 
+/*event listener to submit question*/
 let currentQuestion = document.getElementById('question');
 currentQuestion.addEventListener('submit', checkAnswer);
