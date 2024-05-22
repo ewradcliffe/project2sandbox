@@ -36,7 +36,7 @@ yourName.addEventListener('submit', printName);
 
 /*Event Listener to ask question*/
 let askMeAQuestion = document.getElementById('ask-me-a question');
-askMeAQuestion.addEventListener('submit', printQuestion);
+askMeAQuestion.addEventListener('click', printQuestion);
 
 /*event listener to submit question*/
 let currentQuestion = document.getElementById('question');
