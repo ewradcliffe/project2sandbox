@@ -9,6 +9,13 @@ function printName(event) {
     printName.innerHTML = `Hi ${name.value}, Welcome to the game!`;
 }
 
+/*Event Listener to print the question*/
+function printQuestion(event) {
+    let printMyQuestion = document.getElementById('quiz-area');
+    printMyQuestion.innerHTML = 'This finally worked!!'
+}
+
+
 /*Function to check answer*/
 function checkAnswer(event) {
     event.preventDefault();
@@ -26,6 +33,10 @@ function checkAnswer(event) {
 /*Event Listener to print name*/
 let yourName = document.getElementById("your-name");
 yourName.addEventListener('submit', printName);
+
+/*Event Listener to ask question*/
+let askMeAQuestion = document.getElementById('ask-me-a question');
+askMeAQuestion.addEventListener('submit', printQuestion);
 
 /*event listener to submit question*/
 let currentQuestion = document.getElementById('question');
