@@ -37,13 +37,23 @@ function displayQuestion(event) {
     currentQuestion.addEventListener('submit', checkAnswer);
 }
 
+/*Function to iterate through question objects*/
+function printQuestion(event) {
+    let printMyQuestion = document.getElementById('second-quiz-area');
+    printMyQuestion.innerHTML = `<p>It worked!!</p>`
+}
+
 /*Event Listener to print name*/
 let yourName = document.getElementById("your-name");
 yourName.addEventListener('submit', printName);
 
-/*Event Listener to ask question*/
-let askMeAQuestion = document.getElementById('ask-me-a question');
-askMeAQuestion.addEventListener('click', displayQuestion);
+/*Event Listener to ask question
+let askMeAQuestion = document.getElementById('ask-me-a-question');
+askMeAQuestion.addEventListener('click', displayQuestion);*/
+
+/*Event Listener to ask question - 2*/
+let askMeAQuestion = document.getElementById('ask-me-another-question');
+askMeAQuestion.addEventListener('click', printQuestion);
 
 /*event listener to submit question
 let currentQuestion = document.getElementById('question');
