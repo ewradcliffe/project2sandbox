@@ -1,5 +1,6 @@
 /*total score*/
 let totalScore = 0;
+let questionNumber = 0;
 
 /*Function to print name*/
 function printName(event) {
@@ -25,13 +26,15 @@ function checkAnswer(event) {
 }
 
 /*Function to print the question*/
-function printQuestion(event) {
-    let printMyQuestion = document.getElementById('quiz-area');
-    printMyQuestion.innerHTML = '<form id="question"><h3>Question 1</h3><p>What is the capital of the UK?</p><form method="POST" name="question" class="question"><input type="radio" id="option-two" name="question"><label for="option-one">Belfast</label><input type="radio" id="option-two" name="question"><label for="option-two" >Cardiff</label><input type="radio" id="correct" name="question"><label for="correct">London</label><input type="radio" id="option-four" name="question"><label for="option-four">Edinburgh</label><input type="submit" value="Submit answer"></form></form>'
+function displayQuestion(event) {
+    let displayMyQuestion = document.getElementById('quiz-area');
+    /*adds one to the question number*/
+    ++questionNumber;
+    /*displays question to screen*/
+    displayMyQuestion.innerHTML = `<form id="question"><h3>Question ${questionNumber}</h3><p>What is the capital of the UK?</p><form method="POST" name="question" class="question"><input type="radio" id="option-two" name="question"><label for="option-one">Belfast</label><input type="radio" id="option-two" name="question"><label for="option-two" >Cardiff</label><input type="radio" id="correct" name="question"><label for="correct">London</label><input type="radio" id="option-four" name="question"><label for="option-four">Edinburgh</label><input type="submit" value="Submit answer"></form></form>`
     /*event listener to submit question*/
     let currentQuestion = document.getElementById('question');
     currentQuestion.addEventListener('submit', checkAnswer);
-
 }
 
 /*Event Listener to print name*/
@@ -40,7 +43,7 @@ yourName.addEventListener('submit', printName);
 
 /*Event Listener to ask question*/
 let askMeAQuestion = document.getElementById('ask-me-a question');
-askMeAQuestion.addEventListener('click', printQuestion);
+askMeAQuestion.addEventListener('click', displayQuestion);
 
 /*event listener to submit question
 let currentQuestion = document.getElementById('question');
