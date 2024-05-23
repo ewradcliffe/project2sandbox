@@ -1,6 +1,6 @@
 /* Objects for testing */
 
-let cities = {Edinburgh; no, London; yes , Cardiff; no , Belfast; no}
+let cities = {Edinburgh: 'no', London: 'yes' , Cardiff: 'no' , Belfast: 'no'}
 
 
 /*total score*/
