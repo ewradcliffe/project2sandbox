@@ -45,12 +45,14 @@ function displayQuestion(event) {
 /*Function to iterate through question objects*/
 function printQuestion(event) {
     let printMyQuestion = document.getElementById('second-quiz-area');
-    printMyQuestion.innerHTML = `<p>It worked!!</p>`
+    let questionList = document.createElement('ul');
     for (city in cities) {
-        let myCity = city;
-        printMyQuestion.innerHTML = `<p>It worked!!</p><p>City is ${city}, Capital is ${cities[city]}</p>`
+        let questionChoice = document.createElement('li');
+        questionChoice.innerHTML = city, cities[city];
+        questionList.appendChild(questionChoice);
         console.log(city, ',', cities[city]);
     }
+    printMyQuestion.appendChild(questionList);
 }
 
 /*Event Listener to print name*/
