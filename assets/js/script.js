@@ -1,3 +1,8 @@
+/* Objects for testing */
+
+let cities = {Edinburgh; no, London; yes , Cardiff; no , Belfast; no}
+
+
 /*total score*/
 let totalScore = 0;
 let questionNumber = 0;
