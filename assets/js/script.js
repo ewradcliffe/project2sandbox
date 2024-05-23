@@ -46,6 +46,9 @@ function displayQuestion(event) {
 function printQuestion(event) {
     let printMyQuestion = document.getElementById('second-quiz-area');
     printMyQuestion.innerHTML = `<p>It worked!!</p>`
+    for (city in cities) {
+        printMyQuestion.innerHTML = `<p>It worked!! City is ${city}, Capital is ${cities[city]}</p>`
+    }
 }
 
 /*Event Listener to print name*/
