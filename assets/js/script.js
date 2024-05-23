@@ -47,7 +47,9 @@ function printQuestion(event) {
     let printMyQuestion = document.getElementById('second-quiz-area');
     printMyQuestion.innerHTML = `<p>It worked!!</p>`
     for (city in cities) {
-        printMyQuestion.innerHTML = `<p>It worked!! City is ${city}, Capital is ${cities[city]}</p>`
+        let myCity = city;
+        printMyQuestion.innerHTML = `<p>It worked!!</p><p>City is ${city}, Capital is ${cities[city]}</p>`
+        console.log(city, ',', cities[city]);
     }
 }
 
