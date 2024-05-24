@@ -42,10 +42,13 @@ function displayQuestion(event) {
     currentQuestion.addEventListener('submit', checkAnswer);
 }
 
+/*Alternate Function to check answer*/
+ 
+
 /*Function to iterate through question objects*/
 function printQuestion(event) {
     let printMyQuestion = document.getElementById('second-quiz-area');
-    let questionList = document.createElement('ul');
+    let questionList = document.createElement('div');
     for (city in cities) {
         let questionChoice = document.createElement('button');
         questionChoice.innerHTML = city, cities[city];
@@ -70,3 +73,7 @@ askMeAQuestion.addEventListener('click', printQuestion);
 /*event listener to submit question
 let currentQuestion = document.getElementById('question');
 currentQuestion.addEventListener('submit', checkAnswer);*/
+
+/*event listener to submit question*/
+let currentQuestion = document.getElementById('second-quiz-area');
+currentQuestion.addEventListener('click', checkAnswerTwo);

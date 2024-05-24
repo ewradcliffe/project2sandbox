@@ -24,13 +24,17 @@
 
 /* Alternate Question styling*/
 #second-quiz-area {
-    display: flex;
-    justify-content: space-between;
     background: rgb(185, 185, 255);
 }
 
+#second-quiz-area > div {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+
 #second-quiz-area > div > button {
-    padding: 10%;
+    padding: 5%;
 }
 
 /*Footer*/
