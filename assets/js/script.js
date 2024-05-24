@@ -1,7 +1,7 @@
 /* Objects for testing */
 
 let cities = {Edinburgh: 'no', London: 'yes' , Cardiff: 'no' , Belfast: 'no'}
-
+/*let cities = ['Edinburgh', 'London', 'Belfast', 'Cardiff'];*/
 
 /*total score*/
 let totalScore = 0;
@@ -43,7 +43,12 @@ function displayQuestion(event) {
 }
 
 /*Alternate Function to check answer*/
- 
+function checkAnswerTwo(event) {
+    console.log("Success!");
+    let playerChoice = document.getElementsByTagName('div');
+    console.log(playerChoice);
+
+}
 
 /*Function to iterate through question objects*/
 function printQuestion(event) {
@@ -51,9 +56,8 @@ function printQuestion(event) {
     let questionList = document.createElement('div');
     for (city in cities) {
         let questionChoice = document.createElement('button');
-        questionChoice.innerHTML = city, cities[city];
+        questionChoice.innerHTML = city;
         questionList.appendChild(questionChoice);
-        console.log(city, ',', cities[city]);
     }
     printMyQuestion.appendChild(questionList);
 }
