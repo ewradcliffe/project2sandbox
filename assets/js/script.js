@@ -55,8 +55,8 @@ function printQuestion(event) {
     let printMyQuestion = document.getElementById('second-quiz-area');
     let questionList = document.createElement('div');
     for (city in cities) {
-        let questionChoice = document.createElement('button');
-        questionChoice.innerHTML = city;
+        let questionChoice = document.createElement('div');
+        questionChoice.innerHTML = `<button class = "${cities[city]}">${city}</button>`;
         questionList.appendChild(questionChoice);
         console.log(cities[city]);
     }
