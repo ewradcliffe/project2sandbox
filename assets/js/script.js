@@ -15,6 +15,19 @@ function printName(event) {
     printName.innerHTML = `Hi ${name.value}, Welcome to the game!`;
 }
 
+function right() {
+    let printAnswer = document.getElementById("print-answer");
+    printAnswer.innerHTML = "the answer is correct!"
+        document.getElementById('score');
+        ++totalScore;
+        score.innerHTML = `Your score is ${totalScore}`;
+}
+
+function wrong() {
+    let printAnswer = document.getElementById("print-answer");
+    printAnswer.innerHTML = "the answer is wrong ;("
+
+}
 
 /*Function to check answer*/
 function checkAnswer(event) {
@@ -63,7 +76,7 @@ function printQuestion(event) {
     let questionList = document.createElement('div');
     for (city in cities) {
         let questionChoice = document.createElement('div');
-        questionChoice.innerHTML = `<button id = "${cities[city]}">${city}</button>`;
+        questionChoice.innerHTML = `<button id = "${cities[city]}" onclick = "${cities[city]}()">${city}</button>`;
         questionList.appendChild(questionChoice);
     }
     printMyQuestion.appendChild(questionList);
@@ -85,6 +98,6 @@ askMeAQuestion.addEventListener('click', printQuestion);
 let currentQuestion = document.getElementById('question');
 currentQuestion.addEventListener('submit', checkAnswer);*/
 
-/*event listener to submit question*/
+/*event listener to submit question
 let currentQuestion = document.getElementById('second-quiz-area');
-currentQuestion.addEventListener('click', checkAnswerTwo);
+currentQuestion.addEventListener('click', checkAnswerTwo);*/
