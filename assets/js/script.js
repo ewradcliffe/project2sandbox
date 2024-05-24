@@ -27,7 +27,6 @@ function right() {
 function wrong() {
     let printAnswer = document.getElementById("print-answer");
     printAnswer.innerHTML = "the answer is wrong ;("
-
 }
 
 /*Function to iterate through question objects and print to screen*/
@@ -36,7 +35,7 @@ function printQuestion(event) {
     let questionList = document.createElement('div');
     for (city in cities) {
         let questionChoice = document.createElement('div');
-        questionChoice.innerHTML = `<button id = "${cities[city]}" onclick = "${cities[city]}()">${city}</button>`;
+        questionChoice.innerHTML = `<button class = "question-button" onclick = "${cities[city]}()">${city}</button>`;
         questionList.appendChild(questionChoice);
     }
     printMyQuestion.appendChild(questionList);

@@ -1,12 +1,13 @@
+/*Basic styles*/
+body {
+    text-align: center;
+}
+
 
 /*Introduction*/
-#introduction {
-    text-align: center;
-}
+#introduction {}
 
-#your-name {
-    text-align: center;
-}
+#your-name {}
 
 #print-name {
     text-align: center;
@@ -14,27 +15,13 @@
 }
 
 /*Question styling*/
-#question {
-    text-align: center;
-}
 
-.question > h3 {
-    background: rgb(134, 134, 245);
-}
-
-/* Alternate Question styling*/
-#second-quiz-area {
-    background: rgb(185, 185, 255);
-}
-
-#second-quiz-area > div {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 5%;
-}
-
-#second-quiz-area > div > button {
-    padding: 5%;
+.question-button {
+    font-size: 200%;
+    width: 200px;
+    padding: 2%;
+    margin: 2%;
+    background: rgb(148, 148, 255);
 }
 
 /*Footer*/
