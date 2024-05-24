@@ -49,17 +49,7 @@ function askQuestion(click) {
     displayQuestion.appendChild(choiceList);
 }
 
-/*Function to iterate through question objects and print to screen*/
-function printQuestion(event) {
-    let printMyQuestion = document.getElementById('quiz-area');
-    let questionList = document.createElement('div');
-    for (city in cities) {
-        let questionChoice = document.createElement('div');
-        questionChoice.innerHTML = `<button class = "question-button" onclick = "${cities[city]}()">${city}</button>`;
-        questionList.appendChild(questionChoice);
-    }
-    printMyQuestion.appendChild(questionList);
-}
+
 
 /*Event Listener to print name*/
 let yourName = document.getElementById("your-name");
