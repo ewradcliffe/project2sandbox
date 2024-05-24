@@ -58,6 +58,7 @@ function printQuestion(event) {
         let questionChoice = document.createElement('button');
         questionChoice.innerHTML = city;
         questionList.appendChild(questionChoice);
+        console.log(cities[city]);
     }
     printMyQuestion.appendChild(questionList);
 }
