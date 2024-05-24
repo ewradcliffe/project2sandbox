@@ -1,6 +1,7 @@
 /* Objects for testing */
+let questionOne = ['What is the Capital of the UK?', {Edinburgh: 'wrong', London: 'right' , Cardiff: 'wrong' , Belfast: 'wrong'}];
 
-let cities = {Edinburgh: 'wrong', London: 'right' , Cardiff: 'wrong' , Belfast: 'wrong'}
+/*let cities = {Edinburgh: 'wrong', London: 'right' , Cardiff: 'wrong' , Belfast: 'wrong'}*/
 
 /*total score*/
 let totalScore = 0;
@@ -35,6 +36,19 @@ function wrong() {
     answerUpdate.style.background = "red";
 }
 
+/*Function to ask question*/
+function askQuestion(click) {
+    let displayQuestion = document.getElementById('quiz-area');
+    displayQuestion.innerHTML = `<h2>${questionOne[0]}</h2>`;
+    let choiceList = document.createElement('div');
+    for (choice in questionOne[1]) {
+        let questionChoice = document.createElement('div');
+        questionChoice.innerHTML = `<button class = "question-button">${choice}</button>`;
+        choiceList.appendChild(questionChoice);
+    }
+    displayQuestion.appendChild(choiceList);
+}
+
 /*Function to iterate through question objects and print to screen*/
 function printQuestion(event) {
     let printMyQuestion = document.getElementById('quiz-area');
@@ -53,4 +67,8 @@ yourName.addEventListener('submit', printName);
 
 /*Event Listener to ask question*/
 let askMeAQuestion = document.getElementById('ask-me-a-question');
-askMeAQuestion.addEventListener('click', printQuestion);
+askMeAQuestion.addEventListener('click', askQuestion);
+
+/*Event Listener to print question
+let askMeAQuestion = document.getElementById('ask-me-a-question');
+askMeAQuestion.addEventListener('click', printQuestion);*/
