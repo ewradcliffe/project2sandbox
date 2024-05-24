@@ -45,8 +45,15 @@ function displayQuestion(event) {
 /*Alternate Function to check answer*/
 function checkAnswerTwo(event) {
     console.log("Success!");
-    let playerChoice = document.getElementsByTagName('div');
-    console.log(playerChoice);
+    let printAnswer = document.getElementById("print-answer");
+    if (document.getElementsByClassName('yes').click) {
+        printAnswer.innerHTML = "the answer is correct!"
+        document.getElementById('score');
+        ++totalScore;
+        score.innerHTML = `Your score is ${totalScore}`;
+    } else {
+        printAnswer.innerHTML = "the answer is wrong ;("
+    }
 
 }
 
@@ -58,7 +65,6 @@ function printQuestion(event) {
         let questionChoice = document.createElement('div');
         questionChoice.innerHTML = `<button class = "${cities[city]}">${city}</button>`;
         questionList.appendChild(questionChoice);
-        console.log(cities[city]);
     }
     printMyQuestion.appendChild(questionList);
 }
