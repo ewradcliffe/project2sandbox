@@ -46,7 +46,7 @@ function displayQuestion(event) {
 function checkAnswerTwo(event) {
     console.log("Success!");
     let printAnswer = document.getElementById("print-answer");
-    if (document.getElementsByClassName('yes').click) {
+    if (document.getElementById('yes').click) {
         printAnswer.innerHTML = "the answer is correct!"
         document.getElementById('score');
         ++totalScore;
@@ -63,7 +63,7 @@ function printQuestion(event) {
     let questionList = document.createElement('div');
     for (city in cities) {
         let questionChoice = document.createElement('div');
-        questionChoice.innerHTML = `<button class = "${cities[city]}">${city}</button>`;
+        questionChoice.innerHTML = `<button id = "${cities[city]}">${city}</button>`;
         questionList.appendChild(questionChoice);
     }
     printMyQuestion.appendChild(questionList);
