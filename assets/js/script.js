@@ -43,7 +43,7 @@ function askQuestion(click) {
     let choiceList = document.createElement('div');
     for (choice in questionOne[1]) {
         let questionChoice = document.createElement('div');
-        questionChoice.innerHTML = `<button class = "question-button">${choice}</button>`;
+        questionChoice.innerHTML = `<button class = "question-button" onclick = "${questionOne[1][choice]}()">${choice}</button>`;
         choiceList.appendChild(questionChoice);
     }
     displayQuestion.appendChild(choiceList);
