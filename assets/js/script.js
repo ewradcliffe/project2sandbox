@@ -1,6 +1,6 @@
 /* Objects for testing */
 
-let cities = {Edinburgh: 'no', London: 'yes' , Cardiff: 'no' , Belfast: 'no'}
+let cities = {Edinburgh: 'wrong', London: 'right' , Cardiff: 'wrong' , Belfast: 'wrong'}
 /*let cities = ['Edinburgh', 'London', 'Belfast', 'Cardiff'];*/
 
 /*total score*/
@@ -46,7 +46,7 @@ function displayQuestion(event) {
 function checkAnswerTwo(event) {
     console.log("Success!");
     let printAnswer = document.getElementById("print-answer");
-    if (document.getElementById('yes').click) {
+    if (document.getElementById('right').click) {
         printAnswer.innerHTML = "the answer is correct!"
         document.getElementById('score');
         ++totalScore;
