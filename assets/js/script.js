@@ -14,19 +14,25 @@ function printName(event) {
     printName.innerHTML = `Hi ${name.value}, Welcome to the game!`;
 }
 
-/*Function triggered by onlclick-"right"*/
+/*Function triggered by onclick-"right"*/
 function right() {
     let printAnswer = document.getElementById("print-answer");
     printAnswer.innerHTML = "the answer is correct!"
-        document.getElementById('score');
-        ++totalScore;
-        score.innerHTML = `Your score is ${totalScore}`;
+    /*score update"*/
+    document.getElementById('score');
+    ++totalScore;
+    score.innerHTML = `Your score is ${totalScore}`;
+    /*button update"*/
+    let answerUpdate = document.getElementById("print-answer");
+    answerUpdate.style.background = "green";
 }
 
 /*Function triggered by onlclick-"wrong"*/
 function wrong() {
     let printAnswer = document.getElementById("print-answer");
-    printAnswer.innerHTML = "the answer is wrong ;("
+    printAnswer.innerHTML = "the answer is wrong ;(";
+    let answerUpdate = document.getElementById("print-answer");
+    answerUpdate.style.background = "red";
 }
 
 /*Function to iterate through question objects and print to screen*/
